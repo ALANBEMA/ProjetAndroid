@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.*;
 import fr.epsi.Planning.PlanningEvent;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -23,11 +27,23 @@ public class Agenda extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.agenda);
+        try {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.agenda);
 
-        this.gridLayout = (GridLayout)findViewById(R.id.gridViewPlanning);
-        this.updatePlanning();
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+            this.dateDebutSemaine = dateFormat.parse("26/05/2014 00:00");
+            this.dateFinSemaine = dateFormat.parse("01/06/2014 23:59");
+
+            this.evenements = new ArrayList<PlanningEvent>();
+
+            this.gridLayout = (GridLayout)findViewById(R.id.gridViewPlanning);
+
+            this.updatePlanning();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     private void updatePlanning(){
