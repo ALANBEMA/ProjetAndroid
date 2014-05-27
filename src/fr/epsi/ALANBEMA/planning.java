@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by alexandredouchin on 26/05/2014.
  */
-public class agenda {
+public class planning {
     private int id_planning;
     private int id_personnel;
     private Date date_debut;
