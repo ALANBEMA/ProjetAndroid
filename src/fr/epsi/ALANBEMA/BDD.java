@@ -36,7 +36,7 @@ public class BDD {
         base.execSQL(requete);
     }
 
-    public void addAgenda(agenda agenda) {
+    public void addAgenda(planning planning) {
         String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin) VALUES ( '" + agenda.getId_personnel() + "', '" + agenda.getDate_debut() + "', '" + agenda.getDate_fin() + "');";
         base.execSQL(requete);
     }
