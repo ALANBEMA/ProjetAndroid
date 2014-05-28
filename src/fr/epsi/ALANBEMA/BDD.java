@@ -20,7 +20,7 @@ public class BDD {
 
     public Cursor getInfosPersonnel() {
         return base.rawQuery(
-                "SELECT _id, nom, prenom, adresse, email, numTel FROM personnel", null
+                "SELECT _id, nom, prenom, adresse, email, numTel, emploi FROM personnel", null
         );
     }
 
@@ -31,8 +31,8 @@ public class BDD {
     }
 
     public void addPersonnel(personnel personnel) {
-        String requete = "INSERT INTO personnel (nom, prenom, adresse, email, numTel) VALUES ( '" +
-                "" + personnel.getNom() + "', '" + personnel.getPrenom() + "', '" + personnel.getAdresse() + "', '" + personnel.getEmail() + "', '" + personnel.getNumTelephone() + "');";
+        String requete = "INSERT INTO personnel (nom, prenom, adresse, email, numTel, emploi) VALUES ( '" +
+                "" + personnel.getNom() + "', '" + personnel.getPrenom() + "', '" + personnel.getAdresse() + "', '" + personnel.getEmail() + "', '" + personnel.getNumTelephone() + "', '" + personnel.getEmploi() + "');";
         base.execSQL(requete);
     }
 
