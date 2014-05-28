@@ -10,13 +10,14 @@ public class planning {
     private int id_personnel;
     private Date date_debut;
     private Date date_fin;
+    private String type;
 
-
-    public agenda(int id_planning, int id_personnel, Date date_debut, Date date_fin) {
+    public planning(int id_planning, int id_personnel, Date date_debut, Date date_fin, String type) {
         this.id_planning = id_planning;
         this.id_personnel = id_personnel;
         this.date_debut = date_debut;
         this.date_fin = date_fin;
+        this.type = type;
     }
 
     public int getId_planning() {
@@ -49,5 +50,13 @@ public class planning {
 
     public void setDate_fin(Date date_fin) {
         this.date_fin = date_fin;
+    }
+    
+        public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
