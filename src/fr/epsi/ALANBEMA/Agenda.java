@@ -35,7 +35,7 @@ public class Agenda extends Activity{
 
             this.evenements = new ArrayList<PlanningEvent>();
 
-            this.evenements.add(new PlanningEvent(dateFormat.parse("27/05/2014 12:00"), dateFormat.parse("27/05/2014 20:00"), "Test", R.drawable.typeevent_1));
+            this.evenements.add(new PlanningEvent(dateFormat.parse("27/05/2014 12:00"), dateFormat.parse("28/05/2014 20:00"), "Test", R.drawable.typeevent_1));
 
             this.gridLayout = (GridLayout) findViewById(R.id.gridViewPlanning);
 
@@ -77,9 +77,22 @@ public class Agenda extends Activity{
 
                 for (PlanningEvent _evenement : this.evenements) {
                     if (_evenement.getDateDebut().getHours() - 1 == row) {
-                        _duree = _evenement.getDateFin().getHours() - _evenement.getDateDebut().getHours();
-                        _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
-                        this.gridLayout.addView(createButton(_evenement.getLibelle(), _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                        if(_evenement.getDateFin().getDate()-_evenement.getDateDebut().getDate()>=1)
+                        {
+                            _duree = 24 - _evenement.getDateDebut().getHours();
+                            _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
+                            this.gridLayout.addView(createButton(_evenement.getLibelle(), _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+
+                            _duree = _evenement.getDateFin().getHours();
+                            _colonne = _evenement.getDateFin().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
+                            this.gridLayout.addView(createButton(_evenement.getLibelle(), 1 , (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                        }
+                        else
+                        {
+                            _duree = _evenement.getDateFin().getHours() - _evenement.getDateDebut().getHours();
+                            _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
+                            this.gridLayout.addView(createButton(_evenement.getLibelle(), _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                        }
                     }
                 }
                 if (nbEvenement == 0) {

@@ -37,10 +37,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f5bde17-571d-43b1-8f3a-a69a13338fa0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/BDD.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/BDDHelper.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDDHelper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/personnel.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/planning.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Planning.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" afterPath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ALANBEMA.iws" />
@@ -64,20 +61,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Agenda.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Agenda.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="990">
-              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.5198618" vertical-offset="1049" max-vertical-offset="1980">
+              <caret line="85" column="72" selection-start-line="85" selection-start-column="72" selection-end-line="85" selection-end-column="72" />
               <folding>
                 <element signature="docComment;class#Agenda#0" expanded="true" />
-                <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
                 <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
                 <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
                 <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
                 <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-                <element signature="e#5430#5632#0" expanded="true" />
-                <element signature="e#5621#5622#0" expanded="true" />
+                <element signature="e#6434#6636#0" expanded="true" />
+                <element signature="e#6625#6626#0" expanded="true" />
                 <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
               </folding>
             </state>
@@ -114,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BDD.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BDD.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.24352331" vertical-offset="231" max-vertical-offset="810">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
@@ -221,8 +217,8 @@
         <option value="$PROJECT_DIR$/res/drawable/typeevent_2.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/src/fr/epsi/Planning/OnSwipeListener.java" />
-        <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" />
         <option value="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java" />
+        <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" />
       </list>
     </option>
   </component>
@@ -731,7 +727,7 @@
       <workItem from="1401182412054" duration="2263000" />
       <workItem from="1401184773948" duration="32000" />
       <workItem from="1401275202800" duration="1585000" />
-      <workItem from="1401277210233" duration="8485000" />
+      <workItem from="1401277210233" duration="10961000" />
     </task>
     <task id="LOCAL-00001" summary="Mise a jour">
       <created>1401183195345</created>
@@ -741,11 +737,15 @@
       <created>1401285866407</created>
       <updated>1401285866407</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remise en ordre du projet">
+      <created>1401286521766</created>
+      <updated>1401286521766</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35461000" />
+    <option name="totallyTimeSpent" value="37937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -762,7 +762,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13247864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13247864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27403846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -799,7 +799,8 @@
     </option>
     <MESSAGE value="Mise a jour" />
     <MESSAGE value="Modification du planning&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification du planning&#10;" />
+    <MESSAGE value="Remise en ordre du projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remise en ordre du projet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -854,13 +855,12 @@
           <caret line="49" column="53" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -901,13 +901,12 @@
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -955,13 +954,12 @@
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -991,13 +989,12 @@
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -1046,13 +1043,12 @@
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -1101,13 +1097,12 @@
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
             <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
             <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
             <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
         </state>
@@ -1285,24 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="990">
-          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
-          <folding>
-            <element signature="docComment;class#Agenda#0" expanded="true" />
-            <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
-            <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
-            <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
-            <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
-            <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
-            <element signature="e#5430#5632#0" expanded="true" />
-            <element signature="e#5621#5622#0" expanded="true" />
-            <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Planning.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
@@ -1329,9 +1306,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.24352331" vertical-offset="231" max-vertical-offset="810">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5198618" vertical-offset="1049" max-vertical-offset="1980">
+          <caret line="85" column="72" selection-start-line="85" selection-start-column="72" selection-end-line="85" selection-end-column="72" />
+          <folding>
+            <element signature="docComment;class#Agenda#0" expanded="true" />
+            <element signature="method#createTextView#0;class#Agenda#0" expanded="false" />
+            <element signature="method#createTextView#1;class#Agenda#0" expanded="false" />
+            <element signature="method#createSpace#0;class#Agenda#0" expanded="false" />
+            <element signature="method#createButton#0;class#Agenda#0" expanded="false" />
+            <element signature="e#6434#6636#0" expanded="true" />
+            <element signature="e#6625#6626#0" expanded="true" />
+            <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
