@@ -52,7 +52,7 @@ public class planning {
         this.date_fin = date_fin;
     }
     
-        public String getType() {
+    public String getType() {
         return type;
     }
 

@@ -24,9 +24,9 @@ public class BDD {
         );
     }
 
-    public Cursor getInfosAgenda() {
+    public Cursor getInfosPlanning() {
         return base.rawQuery(
-                "SELECT _id, id_personnel, date_debut, date_fin", null
+                "SELECT _id, id_personnel, date_debut, date_fin, type", null
         );
     }
 
@@ -37,7 +37,7 @@ public class BDD {
     }
 
     public void addAgenda(planning planning) {
-        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin) VALUES ( '" + agenda.getId_personnel() + "', '" + agenda.getDate_debut() + "', '" + agenda.getDate_fin() + "');";
+        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( '" + planning.getId_personnel() + "', '" + planning.getDate_debut() + "', '" + planning.getDate_fin() + "', '" + planning.getType() + "');";
         base.execSQL(requete);
     }
 }
