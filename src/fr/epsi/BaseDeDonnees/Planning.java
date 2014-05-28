@@ -1,18 +1,18 @@
-package fr.epsi.ALANBEMA;
+package fr.epsi.BaseDeDonnees;
 
 import java.util.Date;
 
 /**
  * Created by alexandredouchin on 26/05/2014.
  */
-public class planning {
+public class Planning {
     private int id_planning;
     private int id_personnel;
     private Date date_debut;
     private Date date_fin;
     private String type;
 
-    public planning(int id_planning, int id_personnel, Date date_debut, Date date_fin, String type) {
+    public Planning(int id_planning, int id_personnel, Date date_debut, Date date_fin, String type) {
         this.id_planning = id_planning;
         this.id_personnel = id_personnel;
         this.date_debut = date_debut;

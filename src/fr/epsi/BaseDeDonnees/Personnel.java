@@ -1,21 +1,21 @@
-package fr.epsi.ALANBEMA;
+package fr.epsi.BaseDeDonnees;
 
 /**
  * Created by alexandredouchin on 26/05/2014.
  */
-public class personnel {
+public class Personnel {
     private int id_personnel;
-    private String Nom;
-    private String Prenom;
+    private String nom;
+    private String prenom;
     private String adresse;
     private String email;
     private String numTelephone;
     private String emploi;
 
-    public personnel(int id_personnel, String nom, String prenom, String adresse, String email, String numTelephone, String emploi) {
+    public Personnel(int id_personnel, String nom, String prenom, String adresse, String email, String numTelephone, String emploi) {
         this.id_personnel = id_personnel;
-        this.Nom = nom;
-        this.Prenom = prenom;
+        this.nom = nom;
+        this.prenom = prenom;
         this.adresse = adresse;
         this.email = email;
         this.numTelephone = numTelephone;
@@ -39,19 +39,19 @@ public class personnel {
     }
 
     public String getNom() {
-        return Nom;
+        return nom;
     }
 
     public void setNom(String nom) {
-        Nom = nom;
+        this.nom = nom;
     }
 
     public String getPrenom() {
-        return Prenom;
+        return prenom;
     }
 
     public void setPrenom(String prenom) {
-        Prenom = prenom;
+        this.prenom = prenom;
     }
 
     public String getAdresse() {

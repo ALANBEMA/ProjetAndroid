@@ -1,4 +1,4 @@
-package fr.epsi.ALANBEMA;
+package fr.epsi.BaseDeDonnees;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

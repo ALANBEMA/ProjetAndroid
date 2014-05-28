@@ -36,13 +36,11 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: fr.epsi.ALANBEMA" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5bde17-571d-43b1-8f3a-a69a13338fa0" name="Default" comment="Mise a jour">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fr/epsi/Planning/OnSwipeListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/typeevent_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/typeevent_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" afterPath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="7f5bde17-571d-43b1-8f3a-a69a13338fa0" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/BDD.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/BDDHelper.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDDHelper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/personnel.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/planning.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Planning.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ALANBEMA.iws" />
@@ -66,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Agenda.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Agenda.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6385135" vertical-offset="180" max-vertical-offset="990">
-              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="990">
+              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
               <folding>
                 <element signature="docComment;class#Agenda#0" expanded="true" />
                 <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
@@ -82,6 +80,46 @@
                 <element signature="e#5621#5622#0" expanded="true" />
                 <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Planning.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Planning.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Personnel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008">
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDDHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDDHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BDD.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.24352331" vertical-offset="231" max-vertical-offset="810">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,16 +141,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typeevent_1.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable/typeevent_1.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="342">
-              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="colors.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,26 +156,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="342">
               <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agenda.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/agenda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="738">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -214,6 +222,7 @@
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/src/fr/epsi/Planning/OnSwipeListener.java" />
         <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java" />
+        <option value="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java" />
       </list>
     </option>
   </component>
@@ -290,6 +299,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Planning" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALANBEMA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjetAndroid" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="epsi" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BaseDeDonnees" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -700,17 +731,21 @@
       <workItem from="1401182412054" duration="2263000" />
       <workItem from="1401184773948" duration="32000" />
       <workItem from="1401275202800" duration="1585000" />
-      <workItem from="1401277210233" duration="7834000" />
+      <workItem from="1401277210233" duration="8485000" />
     </task>
     <task id="LOCAL-00001" summary="Mise a jour">
       <created>1401183195345</created>
       <updated>1401183195345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Modification du planning&#10;">
+      <created>1401285866407</created>
+      <updated>1401285866407</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34810000" />
+    <option name="totallyTimeSpent" value="35461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
@@ -724,7 +759,7 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13247864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -763,7 +798,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Mise a jour" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise a jour" />
+    <MESSAGE value="Modification du planning&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification du planning&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,34 +811,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="270">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/typeevent_2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="342">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/agenda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1062">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1179,14 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/agenda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
@@ -1283,8 +1287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6385135" vertical-offset="180" max-vertical-offset="990">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="990">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
           <folding>
             <element signature="docComment;class#Agenda#0" expanded="true" />
             <element signature="method#updatePlanning#0;class#Agenda#0" expanded="false" />
@@ -1296,6 +1300,38 @@
             <element signature="e#5621#5622#0" expanded="true" />
             <element signature="method#setLayoutAndBorder#0;class#Agenda#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Planning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="828">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1008">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDDHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24352331" vertical-offset="231" max-vertical-offset="810">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-package fr.epsi.ALANBEMA;
+package fr.epsi.BaseDeDonnees;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -30,13 +30,13 @@ public class BDD {
         );
     }
 
-    public void addPersonnel(personnel personnel) {
+    public void addPersonnel(Personnel personnel) {
         String requete = "INSERT INTO personnel (nom, prenom, adresse, email, numTel, emploi) VALUES ( '" +
                 "" + personnel.getNom() + "', '" + personnel.getPrenom() + "', '" + personnel.getAdresse() + "', '" + personnel.getEmail() + "', '" + personnel.getNumTelephone() + "', '" + personnel.getEmploi() + "');";
         base.execSQL(requete);
     }
 
-    public void addAgenda(planning planning) {
+    public void addAgenda(Planning planning) {
         String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( '" + planning.getId_personnel() + "', '" + planning.getDate_debut() + "', '" + planning.getDate_fin() + "', '" + planning.getType() + "');";
         base.execSQL(requete);
     }
