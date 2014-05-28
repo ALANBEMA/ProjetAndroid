@@ -19,8 +19,8 @@ public class BDDHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE personnel(_id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT NOT NULL, prenom TEXT NOT NULL, adresse TEXT NOT NULL, email TEXT NOT NULL, numTel TEXT NOT NULL)");
-        db.execSQL("CREATE TABLE agenda(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_personnel INTEGER NOT NULL, date_debut DATE NOT NULL, date_fin DATE NOT NULL, type STRING NOT NULL, FOREIGN KEY(id_personnel) REFERENCES personnel(_id))");
+        db.execSQL("CREATE TABLE personnel(_id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT NOT NULL, prenom TEXT NOT NULL, adresse TEXT NOT NULL, email TEXT NOT NULL, numTel TEXT NOT NULL, emploi TEXT NOT NULL )");
+        db.execSQL("CREATE TABLE agenda(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_personnel INTEGER NOT NULL, date_debut DATE NOT NULL, date_fin DATE NOT NULL, type TEXT NOT NULL, FOREIGN KEY(id_personnel) REFERENCES personnel(_id))");
     }
 
     @Override

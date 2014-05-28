@@ -10,14 +10,16 @@ public class personnel {
     private String adresse;
     private String email;
     private String numTelephone;
+    private String emploi;
 
-    public personnel(int id_personnel, String nom, String prenom, String adresse, String email, String numTelephone) {
+    public personnel(int id_personnel, String nom, String prenom, String adresse, String email, String numTelephone, String emploi) {
         this.id_personnel = id_personnel;
         this.Nom = nom;
         this.Prenom = prenom;
         this.adresse = adresse;
         this.email = email;
         this.numTelephone = numTelephone;
+        this.emploi = emploi;
     }
 
     public String getNumTelephone() {
@@ -66,5 +68,13 @@ public class personnel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getEmploi() {
+        return emploi;
+    }
+
+    public void setEmploi(String emploi) {
+        this.emploi = emploi;
     }
 }
