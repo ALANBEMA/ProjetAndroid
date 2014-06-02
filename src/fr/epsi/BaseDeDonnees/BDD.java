@@ -30,9 +30,9 @@ public class BDD {
         );
     }
 
-    public void addPersonnel(Personnel personnel) {
+    public void addPersonnel(String nom, String prenom, String adresse, String email, String numTel, String emploi) {
         String requete = "INSERT INTO personnel (nom, prenom, adresse, email, numTel, emploi) VALUES ( '" +
-                "" + personnel.getNom() + "', '" + personnel.getPrenom() + "', '" + personnel.getAdresse() + "', '" + personnel.getEmail() + "', '" + personnel.getNumTelephone() + "', '" + personnel.getEmploi() + "');";
+                "" + nom + "', '" + prenom + "', '" + adresse + "', '" + email + "', '" + numTel + "', '" + emploi + "');";
         base.execSQL(requete);
     }
 
