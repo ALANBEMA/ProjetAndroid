@@ -3,4 +3,6 @@
     <string name="app_name">ALANBEMA</string>
     <string name="btnAgenda">Agenda</string>
     <string name="btnEmployes">Employés</string>
+    <string name="btnPlanning">Planning</string>
+    <string name="lblSemaine">N° semaine : </string>
 </resources>

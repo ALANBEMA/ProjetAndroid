@@ -1,7 +1,6 @@
 package fr.epsi.ALANBEMA;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -89,10 +88,6 @@ public class modifPersonnelActivity extends Activity implements View.OnClickList
             }
 
             bdd.addPersonnel(nom, prenom, adresse, email, phone, emploi);
-
-
-
-
         }
 
     }

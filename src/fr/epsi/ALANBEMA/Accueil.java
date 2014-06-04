@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Accueil extends Activity {
@@ -20,7 +19,7 @@ public class Accueil extends Activity {
             @Override
             public void onClick(View v) {
                 if(v.getId() == R.id.btnAgenda){
-                    Intent intent = new Intent(v.getContext(),Agenda.class);
+                    Intent intent = new Intent(v.getContext(),AccueilAgenda.class);
                     startActivity(intent);
                 }
                 else if(v.getId() == R.id.btnPersonnel){
@@ -30,8 +29,6 @@ public class Accueil extends Activity {
                 }
             }
         };
-
-
 
         ImageButton btnAgenda = (ImageButton)findViewById(R.id.btnAgenda);
         ImageButton btnPersonnel = (ImageButton)findViewById(R.id.btnPersonnel);

@@ -18,6 +18,11 @@
                   android:screenOrientation="landscape">
 
         </activity>
+        <activity android:name="AccueilAgenda"
+                  android:label="@string/app_name"
+                  android:screenOrientation="landscape">
+
+        </activity>
         <activity android:name=".AddPersonnelActivity"
                   android:label="@string/app_name"
                   android:screenOrientation="landscape">

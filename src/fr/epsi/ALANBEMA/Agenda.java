@@ -40,6 +40,8 @@ public class Agenda extends Activity{
             this.gridLayout = (GridLayout) findViewById(R.id.gridViewPlanning);
 
             this.updatePlanning();
+
+            this.updateSpinner();
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -81,17 +83,17 @@ public class Agenda extends Activity{
                         {
                             _duree = 24 - _evenement.getDateDebut().getHours();
                             _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
-                            this.gridLayout.addView(createButton(_evenement.getLibelle(), _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                            this.gridLayout.addView(createButton(_evenement, _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
 
                             _duree = _evenement.getDateFin().getHours();
                             _colonne = _evenement.getDateFin().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
-                            this.gridLayout.addView(createButton(_evenement.getLibelle(), 1 , (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                            this.gridLayout.addView(createButton(_evenement, 1 , (int) _colonne, _duree, _evenement.getDrawable(), false, false));
                         }
                         else
                         {
                             _duree = _evenement.getDateFin().getHours() - _evenement.getDateDebut().getHours();
                             _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
-                            this.gridLayout.addView(createButton(_evenement.getLibelle(), _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                            this.gridLayout.addView(createButton(_evenement, _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
                         }
                     }
                 }
@@ -99,6 +101,32 @@ public class Agenda extends Activity{
                     this.gridLayout.addView(createTextView(" ", row, column, R.color.grey_light, row == 12, column == 2));
                 }
             }
+        }
+    }
+
+    private void updateSpinner()
+    {
+        try {
+            ArrayList<Integer> listeSemaines = new ArrayList<Integer>();
+            Calendar calendarMax = Calendar.getInstance();
+
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
+
+            calendarMax.setTime(dateFormat.parse("31/12/"+Calendar.getInstance(TimeZone.getDefault()).getTime().getYear()));
+
+
+
+            for(int i = 1;i<=calendarMax.get(Calendar.WEEK_OF_YEAR);i++)
+            {
+                listeSemaines.add(i);
+            }
+
+            Spinner spinnerNumSemaine = (Spinner)findViewById(R.id.spWeek);
+            ArrayAdapter listeSemaineAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,listeSemaines);
+            spinnerNumSemaine.setAdapter(listeSemaineAdapter);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
     }
 
@@ -131,10 +159,10 @@ public class Agenda extends Activity{
         return space;
     }
 
-    private Button createButton(final String label, int row, int column, int rowspan, int drawable, boolean borderBottom, boolean borderRight) {
+    private Button createButton(final PlanningEvent evenement, int row, int column, int rowspan, int drawable, boolean borderBottom, boolean borderRight) {
         Button button = new Button(this);
         button.setGravity(Gravity.CENTER);
-        button.setText(label);
+        button.setText(evenement.getLibelle());
         button.setBackgroundResource(drawable);
         button.setPadding(5, 5, 5, 5);
         setLayoutAndBorder(button,
@@ -147,7 +175,7 @@ public class Agenda extends Activity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getBaseContext(), label, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), evenement.getLibelle(), Toast.LENGTH_LONG).show();
             }
         });
         return button;
