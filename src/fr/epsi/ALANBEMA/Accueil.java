@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Accueil extends Activity {
+public class Accueil extends Activity{
     /**
      * Called when the activity is first created.
      */
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

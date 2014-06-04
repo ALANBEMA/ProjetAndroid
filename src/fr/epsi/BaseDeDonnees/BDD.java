@@ -3,7 +3,6 @@ package fr.epsi.BaseDeDonnees;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -112,8 +111,11 @@ public class BDD {
         base.execSQL(requete);
     }
 
-    public void addAgenda(Planning planning) {
-        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( '" + planning.getId_personnel() + "', '" + planning.getDate_debut() + "', '" + planning.getDate_fin() + "', '" + planning.getType() + "');";
+    public void addAgenda(Date dateDebut, Date dateFin, String type, int id) {
+        //Benjamin : il faut définir le format de la date
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+
+        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( " + id + ", '" + dateFormat.format(dateDebut) + "', '" + dateFormat.format(dateFin) + "', '" + type + "');";
         base.execSQL(requete);
     }
 }

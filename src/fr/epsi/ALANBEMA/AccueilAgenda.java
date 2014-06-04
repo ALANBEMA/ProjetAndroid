@@ -12,20 +12,26 @@ import android.widget.Button;
 public class AccueilAgenda extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.mainagenda);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.mainagenda);
 
-            View.OnClickListener listener = new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(v.getId() == R.id.btnPlanning){
-                        Intent intent = new Intent(v.getContext(),Agenda.class);
-                        startActivity(intent);
-                    }
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.btnPlanning) {
+                    Intent intent = new Intent(v.getContext(), Agenda.class);
+                    startActivity(intent);
+                } else if (v.getId() == R.id.btnAddPlanning) {
+                    Intent intent = new Intent(v.getContext(), AddPlanning.class);
+                    startActivity(intent);
                 }
-            };
+            }
+        };
 
-            Button btnPlanning = (Button)findViewById(R.id.btnPlanning);
-            btnPlanning.setOnClickListener(listener);
+        Button btnPlanning = (Button) findViewById(R.id.btnPlanning);
+        btnPlanning.setOnClickListener(listener);
+
+        Button btnAddPlanning = (Button) findViewById(R.id.btnAddPlanning);
+        btnAddPlanning.setOnClickListener(listener);
     }
 }

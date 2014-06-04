@@ -17,7 +17,6 @@ public class PersonnelActivity extends ListActivity implements View.OnClickListe
     BDD bdd;
     Cursor ClistPersonnel;
     private Button Bajouter;
-    final int id = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

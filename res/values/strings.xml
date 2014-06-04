@@ -4,6 +4,7 @@
     <string name="btnAgenda">Agenda</string>
     <string name="btnEmployes">Employés</string>
     <string name="btnPlanning">Planning</string>
+    <string name="btnAjouterPLanning">Ajouter</string>
     <string name="lblSemaine">N° semaine : </string>
     <string name="lblAnnee">Année : </string>
     <string name="btnValiderDatePlanning">Valider</string>

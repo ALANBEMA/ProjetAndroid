@@ -9,4 +9,9 @@
             android:layout_height="wrap_content"
             android:text="@string/btnPlanning"
             android:id="@+id/btnPlanning" android:textSize="40dp" android:minHeight="100dp"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAjouterPLanning"
+            android:id="@+id/btnAddPlanning" android:textSize="40dp" android:minHeight="100dp"/>
 </LinearLayout>
