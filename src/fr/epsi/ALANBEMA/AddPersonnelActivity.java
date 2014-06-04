@@ -78,8 +78,7 @@ public class AddPersonnelActivity extends Activity implements View.OnClickListen
 
             bdd.addPersonnel(nom, prenom, adresse, email, phone, emploi);
 
-            Intent intent = new Intent(AddPersonnelActivity.this, PersonnelActivity.class);
-            startActivity(intent);
+            this.finish();
 
 
         }

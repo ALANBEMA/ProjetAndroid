@@ -20,7 +20,7 @@ public class BDDHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE personnel(_id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT NOT NULL, prenom TEXT NOT NULL, adresse TEXT NOT NULL, email TEXT NOT NULL, numTel TEXT NOT NULL, emploi TEXT NOT NULL )");
-        db.execSQL("CREATE TABLE agenda(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_personnel INTEGER NOT NULL, date_debut DATE NOT NULL, date_fin DATE NOT NULL, type TEXT NOT NULL, FOREIGN KEY(id_personnel) REFERENCES personnel(_id))");
+        db.execSQL("CREATE TABLE agenda(_id INTEGER PRIMARY KEY AUTOINCREMENT, id_personnel INTEGER NOT NULL, date_debut TEXT NOT NULL, date_fin TEXT NOT NULL, type TEXT NOT NULL, FOREIGN KEY(id_personnel) REFERENCES personnel(_id))");
 
         db.execSQL("INSERT INTO personnel (_id, nom, prenom, adresse, email, numTel, emploi) VALUES (1, 'Douchin', 'Alexandre', '28 chemin du moulin 44500 La Baule', 'alexandre.douchin@gmail.com', '0619113872', 'médecin');");
         db.execSQL("INSERT INTO personnel (_id, nom, prenom, adresse, email, numTel, emploi) VALUES (2, 'Humeau', 'Benjamin', '28 chemin du moulin 44500 La Baule', 'benjamin.humeau@gmail.com', '0619113872', 'brancardier');");

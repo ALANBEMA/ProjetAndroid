@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
+import fr.epsi.BaseDeDonnees.BDD;
+import fr.epsi.BaseDeDonnees.Planning;
 import fr.epsi.Planning.PlanningEvent;
 
 import java.text.DateFormat;
@@ -15,7 +17,7 @@ import java.util.*;
 /**
  * Created by benjamin on 15/05/14.
  */
-public class Agenda extends Activity{
+public class Agenda extends Activity {
 
     private Calendar dateDebutSemaine;
     private GridLayout gridLayout;
@@ -35,18 +37,47 @@ public class Agenda extends Activity{
 
             this.evenements = new ArrayList<PlanningEvent>();
 
-            this.evenements.add(new PlanningEvent(dateFormat.parse("27/05/2014 12:00"), dateFormat.parse("28/05/2014 20:00"), "Test", R.drawable.typeevent_1));
-
             this.gridLayout = (GridLayout) findViewById(R.id.gridViewPlanning);
 
             this.updatePlanning();
 
             this.updateSpinner();
+
+            Button btnValiderChangementDate = (Button) findViewById(R.id.btnValiderDateAgenda);
+
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (v.getId() == R.id.btnValiderDateAgenda) {
+                        Calendar calendar = Calendar.getInstance();
+
+                        //On vide le calendrier
+                        calendar.clear();
+
+                        calendar.set(Calendar.WEEK_OF_YEAR, (Integer) ((Spinner) findViewById(R.id.spWeek)).getSelectedItem());
+                        calendar.set(Calendar.YEAR, (Integer) ((Spinner) findViewById(R.id.spYear)).getSelectedItem());
+
+                        Date dateDebut = calendar.getTime();
+
+                        dateDebutSemaine.setTime(dateDebut);
+
+                        // On ajoute un jour pour obtenir Lundi
+                        dateDebutSemaine.add(Calendar.DATE,1);
+
+                        updatePlanning();
+                    }
+                }
+            };
+
+            btnValiderChangementDate.setOnClickListener(listener);
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Met a jour le planning
+     */
     private void updatePlanning() {
 
         DateFormat dateFormat = new SimpleDateFormat("cccc dd/MM", Locale.FRANCE);
@@ -64,7 +95,7 @@ public class Agenda extends Activity{
 
         // On créer chaque ligne
         for (int _heure = 0; _heure < 24; _heure++) {
-            this.gridLayout.addView(createTextView(String.valueOf(_heure).concat("H"), _heure + 1, 0, R.color.grey_dark, _heure == 12, false));
+            this.gridLayout.addView(createTextView(String.valueOf(_heure).concat("H"), _heure + 1, 0, R.color.grey_dark, false, false));
         }
 
         for (int column = 1; column < 8; column++) {
@@ -79,18 +110,15 @@ public class Agenda extends Activity{
 
                 for (PlanningEvent _evenement : this.evenements) {
                     if (_evenement.getDateDebut().getHours() - 1 == row) {
-                        if(_evenement.getDateFin().getDate()-_evenement.getDateDebut().getDate()>=1)
-                        {
+                        if (_evenement.getDateFin().getDate() - _evenement.getDateDebut().getDate() >= 1) {
                             _duree = 24 - _evenement.getDateDebut().getHours();
                             _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
                             this.gridLayout.addView(createButton(_evenement, _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
 
                             _duree = _evenement.getDateFin().getHours();
                             _colonne = _evenement.getDateFin().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
-                            this.gridLayout.addView(createButton(_evenement, 1 , (int) _colonne, _duree, _evenement.getDrawable(), false, false));
-                        }
-                        else
-                        {
+                            this.gridLayout.addView(createButton(_evenement, 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
+                        } else {
                             _duree = _evenement.getDateFin().getHours() - _evenement.getDateDebut().getHours();
                             _colonne = _evenement.getDateDebut().getDate() - this.dateDebutSemaine.getTime().getDate() + 1;
                             this.gridLayout.addView(createButton(_evenement, _evenement.getDateDebut().getHours() + 1, (int) _colonne, _duree, _evenement.getDrawable(), false, false));
@@ -104,36 +132,90 @@ public class Agenda extends Activity{
         }
     }
 
-    private void updateSpinner()
-    {
+    /**
+     * Met a jour les spinners
+     */
+    private void updateSpinner() {
+        ArrayList<Integer> listeSemaines = new ArrayList<Integer>();
+        ArrayList<Integer> listeAnnees = new ArrayList<Integer>();
+        Calendar calendarMax = Calendar.getInstance();
+        Calendar aujourdhui = Calendar.getInstance();
+
+        calendarMax.set(Calendar.MONTH, Calendar.DECEMBER);
+        calendarMax.set(Calendar.DAY_OF_MONTH, 31);
+
+        int jour = calendarMax.get(Calendar.DAY_OF_YEAR);
+        int jourSemaine = calendarMax.get(Calendar.DAY_OF_WEEK);
+        int nombreSemaine = (jour - jourSemaine + 10) / 7;
+
+        for (int i = 1; i <= nombreSemaine; i++) {
+            listeSemaines.add(i);
+        }
+
+        Spinner spinnerNumSemaine = (Spinner) findViewById(R.id.spWeek);
+        ArrayAdapter listeSemaineAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listeSemaines);
+        spinnerNumSemaine.setAdapter(listeSemaineAdapter);
+        spinnerNumSemaine.setSelection(aujourdhui.get(Calendar.WEEK_OF_YEAR) - 1);
+
+        for (int i = aujourdhui.get(Calendar.YEAR); i <= aujourdhui.get(Calendar.YEAR) + 1; i++) {
+            listeAnnees.add(i);
+        }
+
+        Spinner spinnerAnnees = (Spinner) findViewById(R.id.spYear);
+        ArrayAdapter listeAnneesAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, listeAnnees);
+        spinnerAnnees.setAdapter(listeAnneesAdapter);
+    }
+
+    /**
+     * Met a jour la liste des evenements
+     */
+    private void updateEvenements() {
         try {
-            ArrayList<Integer> listeSemaines = new ArrayList<Integer>();
-            Calendar calendarMax = Calendar.getInstance();
+            BDD base = new BDD();
+            Calendar dateFinSemaine = this.dateDebutSemaine;
 
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
+            dateFinSemaine.add(Calendar.DATE, 6);
 
-            calendarMax.setTime(dateFormat.parse("31/12/"+Calendar.getInstance(TimeZone.getDefault()).getTime().getYear()));
+            ArrayList<Planning> listePlanning = base.getInfosPlanning(this.dateDebutSemaine.getTime(), dateFinSemaine.getTime());
 
+            this.evenements.clear();
 
-
-            for(int i = 1;i<=calendarMax.get(Calendar.WEEK_OF_YEAR);i++)
+            for(Planning planning :listePlanning)
             {
-                listeSemaines.add(i);
+                this.evenements.add(new PlanningEvent(planning,R.drawable.typeevent_1));
             }
-
-            Spinner spinnerNumSemaine = (Spinner)findViewById(R.id.spWeek);
-            ArrayAdapter listeSemaineAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,listeSemaines);
-            spinnerNumSemaine.setAdapter(listeSemaineAdapter);
-
         } catch (ParseException e) {
             e.printStackTrace();
         }
     }
 
+    /**
+     * Créer un text view
+     *
+     * @param label
+     * @param row
+     * @param column
+     * @param color
+     * @param borderBottom
+     * @param borderRight
+     * @return
+     */
     private TextView createTextView(String label, int row, int column, int color, boolean borderBottom, boolean borderRight) {
         return this.createTextView(label, row, column, color, borderBottom, borderRight, 200);
     }
 
+    /**
+     * Créer un text view
+     *
+     * @param label
+     * @param row
+     * @param column
+     * @param color
+     * @param borderBottom
+     * @param borderRight
+     * @param width
+     * @return
+     */
     private TextView createTextView(String label, int row, int column, int color, boolean borderBottom, boolean borderRight, int width) {
         TextView textView = new TextView(this);
         textView.setGravity(Gravity.CENTER);
@@ -150,6 +232,15 @@ public class Agenda extends Activity{
         return textView;
     }
 
+    /**
+     * Créer un espace
+     *
+     * @param row
+     * @param column
+     * @param rowspan
+     * @param columnspan
+     * @return
+     */
     private Space createSpace(int row, int column, int rowspan, int columnspan) {
         Space space = new Space(this);
         space.setLayoutParams(new GridLayout.LayoutParams(
@@ -159,6 +250,18 @@ public class Agenda extends Activity{
         return space;
     }
 
+    /**
+     * Créer un bouton
+     *
+     * @param evenement
+     * @param row
+     * @param column
+     * @param rowspan
+     * @param drawable
+     * @param borderBottom
+     * @param borderRight
+     * @return
+     */
     private Button createButton(final PlanningEvent evenement, int row, int column, int rowspan, int drawable, boolean borderBottom, boolean borderRight) {
         Button button = new Button(this);
         button.setGravity(Gravity.CENTER);
@@ -181,7 +284,17 @@ public class Agenda extends Activity{
         return button;
     }
 
-    private void setLayoutAndBorder(View view, GridLayout.LayoutParams params,boolean borderBottom, boolean borderTop, boolean borderLeft, boolean borderRight) {
+    /**
+     * Définis un layout et une bordre
+     *
+     * @param view
+     * @param params
+     * @param borderBottom
+     * @param borderTop
+     * @param borderLeft
+     * @param borderRight
+     */
+    private void setLayoutAndBorder(View view, GridLayout.LayoutParams params, boolean borderBottom, boolean borderTop, boolean borderLeft, boolean borderRight) {
         params.bottomMargin = borderBottom ? 1 : 0;
         params.leftMargin = borderLeft ? 1 : 0;
         params.rightMargin = borderRight ? 1 : 0;

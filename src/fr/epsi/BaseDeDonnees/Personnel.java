@@ -12,6 +12,16 @@ public class Personnel {
     private String numTelephone;
     private String emploi;
 
+    /**
+     * Ajout du constructeur vide
+     *
+     * Benjamin
+     */
+    public Personnel()
+    {
+
+    }
+
     public Personnel(int id_personnel, String nom, String prenom, String adresse, String email, String numTelephone, String emploi) {
         this.id_personnel = id_personnel;
         this.nom = nom;

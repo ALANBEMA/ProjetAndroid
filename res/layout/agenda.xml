@@ -11,11 +11,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="@string/lblSemaine"
-                android:id="@+id/textView" android:layout_gravity="center" android:textSize="20dp"/>
+                android:id="@+id/textView" android:textSize="20dp" android:gravity="center"/>
         <Spinner
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spWeek"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="@string/lblAnnee"
+                android:id="@+id/lblAnnee"
+                android:textSize="20dp" android:gravity="center"/>
+        <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spYear"/>
+        <Button android:layout_width="wrap_content" android:layout_height="fill_parent"
+                android:id="@+id/btnValiderDateAgenda"
+                android:text="@string/btnValiderDatePlanning"/>
     </LinearLayout>
     <GridLayout
             android:id="@+id/gridViewPlanning"

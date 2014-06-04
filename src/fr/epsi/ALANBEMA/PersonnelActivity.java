@@ -1,16 +1,14 @@
 package fr.epsi.ALANBEMA;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import fr.epsi.BaseDeDonnees.BDD;
-
-import java.util.HashMap;
 
 /**
  * Created by alexandredouchin on 02/06/2014.
@@ -45,6 +43,8 @@ public class PersonnelActivity extends ListActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == Bajouter){
+
+
             Intent intent = new Intent(PersonnelActivity.this, AddPersonnelActivity.class);
             startActivity(intent);
         }
@@ -55,11 +55,7 @@ public class PersonnelActivity extends ListActivity implements View.OnClickListe
     protected void onListItemClick(ListView l, View v, int position, long idInfo){
        super.onListItemClick(l, v, position, idInfo);
 
-        Log.i("Tuto", " " + position);
-
-
-
-        Intent intent = new Intent(PersonnelActivity.this, AddPersonnelActivity.class);
+        Intent intent = new Intent(PersonnelActivity.this, modifPersonnelActivity.class);
         intent.putExtra("position", position);
         startActivity(intent);
 

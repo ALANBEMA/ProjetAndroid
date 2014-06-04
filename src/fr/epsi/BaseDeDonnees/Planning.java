@@ -12,6 +12,14 @@ public class Planning {
     private Date date_fin;
     private String type;
 
+    /**
+     * Ajout d'un constructeur vide
+     *
+     * Benjamin
+     */
+    public Planning()
+    {}
+
     public Planning(int id_planning, int id_personnel, Date date_debut, Date date_fin, String type) {
         this.id_planning = id_planning;
         this.id_personnel = id_personnel;
@@ -58,5 +66,10 @@ public class Planning {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Personnel getPersonnel()
+    {
+        return new BDD().getInfosPersonnel(this.getId_personnel());
     }
 }
