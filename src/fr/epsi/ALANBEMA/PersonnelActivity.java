@@ -45,6 +45,8 @@ public class PersonnelActivity extends ListActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == Bajouter){
+
+
             Intent intent = new Intent(PersonnelActivity.this, AddPersonnelActivity.class);
             startActivity(intent);
         }
@@ -55,11 +57,7 @@ public class PersonnelActivity extends ListActivity implements View.OnClickListe
     protected void onListItemClick(ListView l, View v, int position, long idInfo){
        super.onListItemClick(l, v, position, idInfo);
 
-        Log.i("Tuto", " " + position);
-
-
-
-        Intent intent = new Intent(PersonnelActivity.this, AddPersonnelActivity.class);
+        Intent intent = new Intent(PersonnelActivity.this, modifPersonnelActivity.class);
         intent.putExtra("position", position);
         startActivity(intent);
 

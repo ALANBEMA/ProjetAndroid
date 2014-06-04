@@ -4,17 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.SimpleCursorAdapter;
 import fr.epsi.BaseDeDonnees.BDD;
+
+import java.util.ArrayList;
 
 /**
  * Created by alexandredouchin on 02/06/2014.
  */
 public class modifPersonnelActivity extends Activity implements View.OnClickListener {
-
 
     private Button Bvalider;
     private Button Bdelete;
@@ -24,21 +27,14 @@ public class modifPersonnelActivity extends Activity implements View.OnClickList
     private String phone;
     private String email;
     private String emploi;
+    private int id;
     BDD bdd;
-    Cursor ClistPersonnel;
+    Cursor personnelList;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.addpersonnel);
-
-        Bundle extra = getIntent().getExtras();
-        String position = extra.getString("position");
-
-        ClistPersonnel = bdd.getInfosPersonnel();
-        startManagingCursor(ClistPersonnel);
-
-
+        setContentView(R.layout.modifpersonnel);
 
         bdd = new BDD();
 
@@ -49,12 +45,57 @@ public class modifPersonnelActivity extends Activity implements View.OnClickList
 
         Bdelete = (Button) findViewById(R.id.bdelete);
         Bdelete.setOnClickListener(this);
+
+        Bundle extra = getIntent().getExtras();
+        int position = extra.getInt("position");
+
+        personnelList = bdd.getInfosPersonnel();
+
+        personnelList.moveToPosition(position);
+
+        id = personnelList.getInt(0);
+
+        nom = personnelList.getString(1);
+        prenom = personnelList.getString(2);
+        adresse = personnelList.getString(3);
+        phone = personnelList.getString(4);
+        email = personnelList.getString(5);
+        emploi = personnelList.getString(6);
+
+        RadioButton rbMedecin = (RadioButton) findViewById(R.id.rbmedecin);
+        RadioButton rbInfirmier = (RadioButton) findViewById(R.id.rbinfirmier);
+        RadioButton rbAide = (RadioButton) findViewById(R.id.rbaidesoignant);
+        RadioButton rbBrancardier = (RadioButton) findViewById(R.id.rbbrancardier);
+
+        EditText EditNom = (EditText) findViewById(R.id.etNom);
+        EditNom.setText(nom);
+        EditText EditPrenom = (EditText) findViewById(R.id.etPrenom);
+        EditPrenom.setText(prenom);
+        EditText EditAdresse= (EditText) findViewById(R.id.etadresse);
+        EditAdresse.setText(adresse);
+        EditText EditPhone = (EditText) findViewById(R.id.etphone);
+        EditPhone.setText(phone);
+        EditText EditEmail = (EditText) findViewById(R.id.etemail);
+        EditEmail.setText(email);
+
+        if(emploi.equals("Médecin")){
+            rbMedecin.setChecked(true);
+        }
+        else if(emploi.equals("Infirmier")){
+            rbInfirmier.setChecked(true);
+        }
+        else if(emploi.equals("Aide Soignant")){
+            rbAide.setChecked(true);
+        }
+        else if(emploi.equals("Brancardier")){
+            rbBrancardier.setChecked(true);
+        }
     }
 
     @Override
     public void onClick(View v) {
-        if (v == Bvalider){
 
+        if (v == Bvalider){
             RadioButton rbMedecin = (RadioButton) findViewById(R.id.rbmedecin);
             RadioButton rbInfirmier = (RadioButton) findViewById(R.id.rbinfirmier);
             RadioButton rbAide = (RadioButton) findViewById(R.id.rbaidesoignant);
@@ -88,11 +129,17 @@ public class modifPersonnelActivity extends Activity implements View.OnClickList
                 emploi = "Brancardier";
             }
 
-            bdd.addPersonnel(nom, prenom, adresse, email, phone, emploi);
+            bdd.updatePersonnel(id, nom, prenom, adresse, phone, email, emploi);
+
+            Intent intent = new Intent(modifPersonnelActivity.this, PersonnelActivity.class);
+            startActivity(intent);
 
 
-
-
+        }
+        else if(v == Bdelete){
+            bdd.deletePersonnel(id);
+            Intent intent = new Intent(modifPersonnelActivity.this, PersonnelActivity.class);
+            startActivity(intent);
         }
 
     }

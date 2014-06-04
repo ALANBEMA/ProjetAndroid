@@ -24,6 +24,8 @@ public class BDD {
         );
     }
 
+
+
     public Cursor getInfosPlanning() {
         return base.rawQuery(
                 "SELECT _id, id_personnel, date_debut, date_fin, type", null
@@ -37,7 +39,12 @@ public class BDD {
     }
 
     public void updatePersonnel(int id, String nom, String prenom, String adresse, String email, String numTel, String emploi) {
-        String requete = "UPDATE personnel SET nom = " + nom + ", prenom = " + prenom + ", adresse = " + adresse + ", email = " + email + ", numTel = " + numTel + ", emploi = " + emploi + " WHERE _id = " + id + ";";
+        String requete = "UPDATE personnel SET nom = '" + nom + "', prenom = '" + prenom + "', adresse = '" + adresse + "', email = '" + email + "', numTel = '" + numTel + "', emploi = '" + emploi + "' WHERE _id = " + id + ";";
+        base.execSQL(requete);
+    }
+
+    public void deletePersonnel(int id) {
+        String requete = "DELETE FROM personnel WHERE _id = " + id + ";";
         base.execSQL(requete);
     }
 
