@@ -5,10 +5,19 @@
               android:layout_height="fill_parent" android:weightSum="1">
     <ImageButton android:id="@+id/btnAgenda" android:layout_gravity="center" android:layout_width="wrap_content"
                  android:src="@drawable/agenda" android:layout_height="wrap_content"
-                 android:layout_margin="250dp" android:layout_column="1"
-                 android:contentDescription="@string/btnAgenda" android:layout_weight="0.5"/>
+                 android:layout_column="1"
+                 android:contentDescription="@string/btnAgenda"
+                 android:layout_marginLeft="250dp" android:layout_marginRight="111dp" android:layout_marginTop="235dp"
+                 android:layout_marginBottom="246dp" android:layout_weight="0.24"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajout Planning"
+            android:id="@+id/bajoutplanning" android:textSize="40dp" android:layout_gravity="center"/>
     <ImageButton android:id="@+id/btnPersonnel" android:layout_gravity="center" android:layout_width="wrap_content"
                  android:src="@drawable/utilisateur" android:layout_column="2" android:contentDescription="@string/btnEmployes"
-                 android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_margin="250dp"/>
+                 android:layout_height="wrap_content" android:layout_weight="0.5" android:layout_marginLeft="55dp"
+                 android:layout_marginRight="189dp" android:layout_marginTop="250dp"
+                 android:layout_marginBottom="250dp"/>
 </LinearLayout>
 

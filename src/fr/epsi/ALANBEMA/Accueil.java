@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Accueil extends Activity {
+public class Accueil extends Activity implements View.OnClickListener {
     /**
      * Called when the activity is first created.
      */
+    private Button Bajouter;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,5 +39,19 @@ public class Accueil extends Activity {
         ImageButton btnPersonnel = (ImageButton)findViewById(R.id.btnPersonnel);
         btnAgenda.setOnClickListener(listener);
         btnPersonnel.setOnClickListener(listener);
+
+        Bajouter = (Button) findViewById(R.id.bajoutplanning);
+        Bajouter.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == Bajouter){
+
+
+            Intent intent = new Intent(Accueil.this, AddPlanning.class);
+            startActivity(intent);
+        }
+
     }
 }

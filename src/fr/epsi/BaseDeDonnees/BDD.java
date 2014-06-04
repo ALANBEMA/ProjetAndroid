@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.Date;
+
 /**
  * Created by alexandredouchin on 26/05/2014.
  */
@@ -48,8 +50,8 @@ public class BDD {
         base.execSQL(requete);
     }
 
-    public void addAgenda(Planning planning) {
-        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( '" + planning.getId_personnel() + "', '" + planning.getDate_debut() + "', '" + planning.getDate_fin() + "', '" + planning.getType() + "');";
+    public void addAgenda(Date dateDebut, Date dateFin, String type, int id) {
+        String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( " + id + ", '" + dateDebut + "', '" + dateFin + "', " + type + ");";
         base.execSQL(requete);
     }
 }

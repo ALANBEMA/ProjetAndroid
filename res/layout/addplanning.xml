@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de début :"
+            android:id="@+id/textView" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:textSize="40dp" android:layout_marginLeft="20dp"/>
+    <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePickerDebut"
+            android:layout_below="@+id/textView" android:layout_alignLeft="@+id/textView"/>
+    <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePickerDebut"
+            android:layout_marginLeft="12dp" android:layout_alignTop="@+id/datePickerDebut"
+            android:layout_toRightOf="@+id/datePickerDebut"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de fin :"
+            android:id="@+id/textView2"
+            android:textSize="40dp"
+            android:layout_centerVertical="true" android:layout_alignLeft="@+id/textView"/>
+    <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePickerFin"
+            android:layout_alignTop="@+id/timePickerFin" android:layout_toLeftOf="@+id/timePickerDebut"/>
+    <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePickerFin"
+            android:layout_below="@+id/textView2" android:layout_alignLeft="@+id/timePickerDebut"
+            android:layout_marginTop="11dp"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_below="@+id/datePickerDebut" android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnel"
+            android:id="@+id/textView3"
+            android:layout_marginRight="58dp" android:textSize="40dp"
+            android:layout_alignBottom="@+id/datePickerDebut" android:layout_alignRight="@+id/spinner"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:id="@+id/buttonValiderPlanning" android:layout_alignParentBottom="true" android:layout_alignRight="@+id/spinner"
+            android:textSize="50dp" android:layout_marginRight="20dp" android:layout_alignParentEnd="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type :"
+            android:id="@+id/textView4"
+            android:textSize="40dp" android:layout_below="@+id/timePickerDebut"
+            android:layout_alignLeft="@+id/textView3" android:layout_marginTop="100dp"/>
+    <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonValiderPlanning" android:layout_alignLeft="@+id/textView4"
+            android:layout_below="@+id/textView4">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Présence"
+                android:id="@+id/radioButtonPresence" android:layout_gravity="left|center_vertical" android:checked="false"
+                android:textSize="40dp"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Absence"
+                android:id="@+id/radioButtonPresence" android:layout_gravity="left|center_vertical" android:checked="false"
+                android:textSize="40dp"/>
+    </RadioGroup>
+</RelativeLayout>
