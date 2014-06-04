@@ -131,15 +131,14 @@ public class modifPersonnelActivity extends Activity implements View.OnClickList
 
             bdd.updatePersonnel(id, nom, prenom, adresse, phone, email, emploi);
 
-            Intent intent = new Intent(modifPersonnelActivity.this, PersonnelActivity.class);
-            startActivity(intent);
+            this.finish();
 
 
         }
         else if(v == Bdelete){
             bdd.deletePersonnel(id);
-            Intent intent = new Intent(modifPersonnelActivity.this, PersonnelActivity.class);
-            startActivity(intent);
+
+            this.finish();
         }
 
     }

@@ -49,16 +49,17 @@
     </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f5bde17-571d-43b1-8f3a-a69a13338fa0" name="Default" comment="AddPersonnel.xml">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java" afterPath="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java" afterPath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java" />
+    <list default="true" id="7f5bde17-571d-43b1-8f3a-a69a13338fa0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/addpersonnel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java" afterPath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/addpersonnel.xml" afterPath="$PROJECT_DIR$/res/layout/addpersonnel.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java" afterPath="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="dbc8fb53-1e0c-4e47-a232-6a6e171eee35" name="Failed commit: Default" comment="AddPersonnel.xml" />
     <ignored path="ALANBEMA.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401887613554" ignored="false" />
+    <file path="/Dummy.txt" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401892861092" ignored="false" />
     <file path="/Accueil.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401694248670" ignored="false" />
     <file path="/Personnel.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401694227452" ignored="false" />
     <file path="$PROJECT_DIR$/../EvaluationAndroid/EvaluationAndroid/src/main/java/com/example/evaluationandroid/ListActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401691707748" ignored="false" />
@@ -66,11 +67,11 @@
     <file path="/AndroidManifest.xml" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401709079046" ignored="false" />
     <file path="/BDDHelper.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401693846339" ignored="false" />
     <file path="/personnel.xml" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401695672456" ignored="false" />
-    <file path="/AddPersonnelActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401882374498" ignored="false" />
+    <file path="/AddPersonnelActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401902039180" ignored="false" />
     <file path="/PersonnelActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401890204881" ignored="false" />
     <file path="/AddPersonnel.xml" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401698539735" ignored="false" />
     <file path="/BDD.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401891748141" ignored="false" />
-    <file path="/modifPersonnelActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401892745661" ignored="false" />
+    <file path="/modifPersonnelActivity.java" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401901874874" ignored="false" />
     <file path="/addpersonnel.xml" changelist="7f5bde17-571d-43b1-8f3a-a69a13338fa0" time="1401887631941" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,10 +133,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PersonnelActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PersonnelActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="49" selection-start="779" selection-end="805" vertical-scroll-proportion="0.0">
+            <state line="32" column="49" selection-start="779" selection-end="805" vertical-scroll-proportion="0.74157304">
               <folding />
             </state>
           </provider>
@@ -159,31 +160,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddPersonnelActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java">
+      <file leaf-file-name="Agenda.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="13" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+            <state line="58" column="47" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modifpersonnel.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/modifpersonnel.xml">
-          <provider editor-type-id="text-editor">
-            <state line="129" column="17" selection-start="7011" selection-end="7011" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modifPersonnelActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="modifPersonnelActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="27" selection-start="4053" selection-end="4053" vertical-scroll-proportion="4.2601433">
+            <state line="19" column="13" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,45 +180,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Agenda.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Personnel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personnel.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/personnel.xml">
-          <provider editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="addpersonnel.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/addpersonnel.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="27" selection-start="6431" selection-end="6431" vertical-scroll-proportion="-66.111115">
+            <state line="121" column="17" selection-start="6556" selection-end="6556" vertical-scroll-proportion="-67.22222">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddPersonnelActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="26" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -268,11 +236,11 @@
         <option value="$PROJECT_DIR$/res/layout/personnel.xml" />
         <option value="$PROJECT_DIR$/res/layout/modifpersonnel.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/addpersonnel.xml" />
         <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java" />
         <option value="$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/BDD.java" />
         <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java" />
+        <option value="$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java" />
       </list>
     </option>
   </component>
@@ -649,7 +617,7 @@
       <workItem from="1401275202800" duration="1585000" />
       <workItem from="1401277210233" duration="8485000" />
       <workItem from="1401690826801" duration="15601000" />
-      <workItem from="1401874678090" duration="12800000" />
+      <workItem from="1401874678090" duration="13903000" />
     </task>
     <task id="LOCAL-00001" summary="Mise a jour">
       <created>1401183195345</created>
@@ -667,18 +635,22 @@
       <created>1401881535389</created>
       <updated>1401881535389</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout, modification et suppression d'un employé marche parfaitement">
+      <created>1401892867246</created>
+      <updated>1401892867246</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63862000" />
+    <option name="totallyTimeSpent" value="64965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="22" width="1438" height="824" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2902299" sideWeight="0.671875" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3347701" sideWeight="0.671875" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2902299" sideWeight="0.6349432" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3347701" sideWeight="0.6349432" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.359375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27370688" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -688,13 +660,13 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20114942" sideWeight="0.25710228" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3650568" sideWeight="0.52011496" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3650568" sideWeight="0.52011496" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.67045456" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20114942" sideWeight="0.6349432" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20114942" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -758,7 +730,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddPersonnel.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout, modification et suppression d'un employé marche parfaitement" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -777,6 +749,7 @@
     <MESSAGE value="Beaucoup de changement&#10;" />
     <MESSAGE value="Dernier commit" />
     <MESSAGE value="AddPersonnel.xml" />
+    <MESSAGE value="Ajout, modification et suppression d'un employé marche parfaitement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,46 +811,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/personnel.xml">
-      <provider editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/modifpersonnel.xml">
-      <provider editor-type-id="text-editor">
-        <state line="129" column="17" selection-start="7011" selection-end="7011" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/addpersonnel.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="27" selection-start="6431" selection-end="6431" vertical-scroll-proportion="-66.111115">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/epsi/BaseDeDonnees/Personnel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -896,26 +832,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="49" selection-start="779" selection-end="805" vertical-scroll-proportion="0.0">
+    <entry file="file://$PROJECT_DIR$/res/layout/modifpersonnel.xml">
+      <provider editor-type-id="text-editor">
+        <state line="129" column="17" selection-start="7011" selection-end="7011" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/personnel.xml">
+      <provider editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/Agenda.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="47" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/addpersonnel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="17" selection-start="6556" selection-end="6556" vertical-scroll-proportion="-67.22222">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/AddPersonnelActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="13" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+        <state line="80" column="26" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/modifPersonnelActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/epsi/ALANBEMA/PersonnelActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="27" selection-start="4053" selection-end="4053" vertical-scroll-proportion="4.2601433">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="32" column="49" selection-start="779" selection-end="805" vertical-scroll-proportion="0.74157304">
+          <folding />
         </state>
       </provider>
     </entry>
