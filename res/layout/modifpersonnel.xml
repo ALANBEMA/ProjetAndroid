@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom :"
+            android:id="@+id/textView"
+            android:textSize="50dp" android:layout_alignTop="@+id/textView2" android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etNom" android:layout_alignParentTop="true" android:layout_toRightOf="@+id/textView"
+            android:layout_marginLeft="14dp" android:layout_alignBottom="@+id/textView"
+            android:minWidth="400dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prenom :"
+            android:id="@+id/textView2"
+            android:textSize="50dp"
+            android:layout_marginLeft="11dp" android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/etNom" android:layout_marginTop="17dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPrenom" android:layout_alignParentTop="true" android:layout_toRightOf="@+id/textView2"
+            android:layout_marginLeft="10dp" android:layout_alignBottom="@+id/textView2"
+            android:minWidth="450dp" android:inputType="none"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adresse :"
+            android:id="@+id/textView3" android:layout_below="@+id/textView" android:layout_alignParentLeft="true"
+            android:layout_marginTop="11dp" android:textSize="50dp" android:layout_marginLeft="10dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:ems="10"
+            android:id="@+id/etadresse"
+            android:layout_below="@+id/textView3" android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/etPrenom" android:minHeight="80dp" android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Téléphone :"
+            android:id="@+id/textView4"
+            android:textIsSelectable="false" android:textSize="50dp"
+            android:layout_below="@+id/etadresse" android:layout_alignParentLeft="true" android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/etphone"
+            android:layout_alignBottom="@+id/textView4" android:layout_toRightOf="@+id/textView4"
+            android:layout_marginLeft="10dp" android:layout_alignTop="@+id/textView4"
+            android:layout_toLeftOf="@+id/etPrenom"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email :"
+            android:id="@+id/textView5" android:layout_below="@+id/textView4" android:layout_alignParentLeft="true"
+            android:textSize="50dp" android:layout_marginTop="20dp" android:layout_marginLeft="10dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/etemail" android:layout_alignTop="@+id/textView5"
+            android:layout_toRightOf="@+id/textView5" android:layout_alignBottom="@+id/textView5"
+            android:layout_alignRight="@+id/etphone" android:layout_marginLeft="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emploi :"
+            android:id="@+id/textView6" android:layout_below="@+id/textView5" android:layout_alignParentLeft="true"
+            android:textSize="50dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp"/>
+    <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/textView6" android:layout_toRightOf="@+id/textView3"
+            android:layout_alignParentBottom="true" android:layout_alignRight="@+id/etemail">
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Médecin"
+                android:id="@+id/rbmedecin" android:layout_gravity="left|center_vertical" android:textSize="50dp"
+                android:checked="false"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Infirmier"
+                android:id="@+id/rbinfirmier" android:layout_gravity="left|center_vertical" android:textSize="50dp"
+                android:checked="false"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aide Soignant"
+                android:id="@+id/rbaidesoignant" android:layout_gravity="left|center_vertical" android:textSize="50dp"
+                android:checked="false"/>
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brancardier"
+                android:id="@+id/rbbrancardier" android:layout_gravity="left|center_vertical" android:textSize="50dp"
+                android:checked="false"/>
+    </RadioGroup>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:id="@+id/buttonadd"
+            android:textSize="40dp" android:minWidth="400dp"
+            android:minHeight="100dp" android:layout_below="@+id/textView6" android:layout_alignRight="@+id/etadresse"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Supprimer"
+            android:id="@+id/bdelete"
+            android:minHeight="100dp" android:minWidth="400dp" android:textSize="40dp" android:maxWidth="400dp"
+            android:height="400dp"
+            android:layout_below="@+id/buttonadd" android:layout_alignLeft="@+id/buttonadd"
+            android:layout_marginTop="10dp"/>
+</RelativeLayout>

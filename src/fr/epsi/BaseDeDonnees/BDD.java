@@ -36,6 +36,11 @@ public class BDD {
         base.execSQL(requete);
     }
 
+    public void updatePersonnel(int id, String nom, String prenom, String adresse, String email, String numTel, String emploi) {
+        String requete = "UPDATE personnel SET nom = " + nom + ", prenom = " + prenom + ", adresse = " + adresse + ", email = " + email + ", numTel = " + numTel + ", emploi = " + emploi + " WHERE _id = " + id + ";";
+        base.execSQL(requete);
+    }
+
     public void addAgenda(Planning planning) {
         String requete = "INSERT INTO agenda (id_personnel, date_debut, date_fin, type) VALUES ( '" + planning.getId_personnel() + "', '" + planning.getDate_debut() + "', '" + planning.getDate_fin() + "', '" + planning.getType() + "');";
         base.execSQL(requete);

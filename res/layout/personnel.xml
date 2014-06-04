@@ -17,7 +17,8 @@
             android:text="Ajouter"
             android:id="@+id/buttonAddPersonnel"
             android:enabled="true"
-            android:clickable="true" android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp" android:layout_marginTop="51dp" android:textSize="40dp"
-            android:minHeight="80dp" android:minWidth="300dp"/>
+            android:clickable="true"
+            android:layout_marginLeft="13dp" android:layout_marginTop="44dp" android:textSize="40dp"
+            android:minHeight="80dp" android:minWidth="300dp" android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
 </RelativeLayout>
